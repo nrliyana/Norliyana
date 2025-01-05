@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Idol</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+            margin: 0;
+            padding: 0;
+            background-color: #fef6e4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #d1a872;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: none;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Animation */
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 3em;
+            font-weight: bold;
+            color: #d17b0f;
+            animation: bounce 2s infinite;
+            /* Apply animation */
+        }
+
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+            /* List Styling */
+            .celebrity-section {
+                margin: 30px auto;
+                padding: 20px;
+                max-width: 800px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .celebrity-section ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .celebrity-section ul li {
+                font-size: 1.5em;
+                padding: 10px 0;
+                cursor: pointer;
+                transition: transform 0.3s ease, color 0.3s ease;
+                color: #555;
+            }
+
+            .celebrity-section ul li:hover {
+                transform: scale(1.05);
+                color: #d17b0f;
+            }
+
+            /* Multimedia Section */
+            .media {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 30px auto;
+                max-width: 800px;
+            }
+
+            .media h2 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+            iframe,
+            video {
+                border-radius: 10px;
+                margin: 20px 0;
+                width: 90%;
+                max-width: 600px;
+            }
+
+            /* Custom Audio Player */
+            .audio-player {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #d1a872;
+                border-radius: 8px;
+                padding: 10px;
+                margin: 20px 0;
+            }
+
+            .audio-player audio {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+            }
+
+            .audio-player button {
+                background-color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 15px;
+                margin-left: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .audio-player button:hover {
+                background-color: #d17b0f;
+                color: #fff;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myhobby.html">My Hobby</a>
+        <a href="foodhunting.html">Food Hunting</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="myidol.html">My Idol</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <!-- Page Header -->
+    <h1>My Favourite Celebrity</h1>
+
+    <!-- Celebrity Section -->
+    <div class="celebrity-section">
+        <h2>Click to Learn Fun Facts!</h2>
+        <ul id="celebrity-list">
+            <li data-fact="SEVENTEEN is known for their synchronized dance moves.">SEVENTEEN</li>
+            <li data-fact="Wave to Earth is a South Korean indie band with unique vibes.">Wave to Earth</li>
+            <li data-fact="TWICE is one of the best-selling K-pop girl groups in history.">TWICE</li>
+        </ul>
+    </div>
+
+    <!-- Multimedia Section -->
+    <div class="media">
+        <h2>Watch SEVENTEEN on YouTube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ov3NRyoIEQ4" title="YouTube video player"
+            frameborder="0" allowfullscreen></iframe>
+
+        <h2>Listen to TWICE Best Title Track</h2>
+        <div class="audio-player">
+            <audio controls>
+                <source src="audio/TWICE - What is Love.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button onclick="document.querySelector('.audio-player audio').play()">Play</button>
+            <button onclick="document.querySelector('.audio-player audio').pause()">Pause</button>
+        </div>
+
+        <h2>Wave to Earth Best Track</h2>
+        <video controls width="300" height="400">
+            <source src="video/wave to earth.MP4" type="video/mp4" width="10" height="30">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <!-- Footer -->
+    <footer align="center">
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Fun Fact Interaction
+        document.getElementById("celebrity-list").addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                const fact = event.target.getAttribute("data-fact");
+                alert(`Did you know? ${fact}`);
+            }
+        });
+    </script>
+</body>
+
+</html>

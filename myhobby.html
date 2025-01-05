@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+            margin: 0;
+            padding: 10;
+            background-color: #f9f2f2;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #e4aba0;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            margin: 0 15px;
+            font-size: 1.3em;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hobby Section */
+        .hobby-section {
+            max-width: 1300px;
+            margin: 30px;
+            padding: 5px;
+            border: 3px solid #f8a1a1;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .hobby-section h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .hobby-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .hobby-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hobby-image {
+            flex: 1.3;
+            padding: 10px;
+        }
+
+        .hobby-image img {
+            width: 100%;
+            max-width: 370px;
+            border: 5px solid #f8a1a1;
+            border-radius: 5px;
+        }
+
+        .hobby-text {
+            flex: 2;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .hobby-text h3 {
+            font-size: 1.3rem;
+            color: black;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hobby-text p {
+            font-size: 1rem;
+            color: #333;
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            margin: 20px;
+            padding: 15px;
+            border: 1.8px dashed #f8a1a1;
+            background-color: #ffe9e9;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myhobby.html">My Hobby</a>
+        <a href="foodhunting.html">Food Hunting</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="myidol.html">My Idol</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <!-- Hobby Section -->
+    <div class="hobby-section">
+        <h1>My Hobby</h1>
+
+        <!-- Dynamic Quote Section -->
+        <div id="quote-section" class="quote-section">
+            <!-- JavaScript will populate this section -->
+        </div>
+
+        <!-- Hobby Content -->
+        <div class="hobby-title">Cooking</div>
+        <div class="hobby-content">
+            <div class="hobby-image">
+                <img src="images/cooking am.jpg" alt="Cooking">
+            </div>
+            <div class="hobby-text">
+                <h3>Exploring New Flavors:</h3>
+                <p>- My passion for food motivates me to try new recipes and cuisines. Each dish I prepare can become a
+                    culinary adventure, expanding my palate and enriching my cooking experience.</p>
+                <h3>Sharing Joy:</h3>
+                <p>- Cooking for others enhances the pleasure of eating. Whether it’s family, friends, or new
+                    acquaintances, sharing meals fosters connection and creates cherished memories around the table.</p>
+            </div>
+        </div>
+
+        <hr size="4" color="#f8a1a1" width="100%">
+
+        <div class="hobby-title">Food Hunting</div>
+        <div class="hobby-content">
+            <div class="hobby-image">
+                <img src="images/bbq town.png" alt="food hunting">
+            </div>
+            <div class="hobby-text">
+                <h3>Discover New Flavors:</h3>
+                <p>- Food hunting lets me explore unique dishes and cuisines, broadening my palate. It’s an opportunity to
+                    learn about different cultures through their food traditions.</p>
+                <h3>Explore Routes and Master Public Transport:</h3>
+                <p>- Explore new routes and improve navigation skills by mastering public transport on the journey to
+                    restaurants.</p>
+            </div>
+        </div>
+
+        <hr size="4" color="#f8a1a1" width="100%">
+
+        <div class="hobby-title">Taking Pictures</div>
+        <div class="hobby-content">
+            <div class="hobby-image">
+                <img src="images/taking pictures 1.jpg" alt="Scenery">
+            </div>
+            <div class="hobby-text">
+                <h3>Relieves Stress and Preserves Memories:</h3>
+                <p>- Offers a calming and enjoyable way to focus on the present moment. Allows you to document and cherish
+                    special moments and experiences.</p>
+                <h3>Boosts Creativity and Enhances Observation Skills:</h3>
+                <p>- Encourages you to see the world from new perspectives and capture unique moments. Sharpens your
+                    attention to detail and appreciation for beauty in everyday life.</p>
+            </div>
+        </div>
+
+        <hr size="4" color="#f8a1a1" width="100%">
+
+        <div class="hobby-title">Watching K-Drama</div>
+        <div class="hobby-content">
+            <div class="hobby-image">
+                <img src="images/kdrama.gif" alt="kdrama">
+            </div>
+            <div class="hobby-text">
+                <h3>Stress Relief:</h3>
+                <p>- Watching K-dramas provides an escape from daily life with their engaging stories and relatable
+                    characters.</p>
+                <h3>Cultural Insight:</h3>
+                <p>- They offer a glimpse into Korean culture, traditions, and language,
+                    enriching viewers' understanding of a different lifestyle.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer align="center">
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        <a href="#top">Back to top</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript to display a dynamic motivational quote
+        const quotes = [
+            "Cooking is love made visible.",
+            "Every picture tells a story, so take more.",
+            "Food is not just fuel; it's an experience.",
+            "Adventure awaits, even on your plate!",
+            "Capture the moment; savor the flavor.",
+            "Hobbies create joy and memories that last forever."
+        ];
+
+        function displayQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote-section").textContent = quotes[randomIndex];
+        }
+
+        // Display the quote when the page loads
+        displayQuote();
+    </script>
+</body>
+
+</html>

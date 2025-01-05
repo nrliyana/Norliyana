@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+            margin: 0;
+            padding: 10;
+            color: #333;
+            background-image: url("images/background\ home.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: brightness(95%);
+        }
+
+        .navbar {
+            background-color: #4296a7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.3em;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #4d4a4a;
+        }
+
+        .header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        h3 {
+            color: #4d4a4a;
+            font-size: 23px;
+        }
+
+        .quote-section {
+            text-align: left;
+            margin: 30px;
+        }
+
+        .quote-section p {
+            margin: 5px;
+            font-size: 1.2em;
+            color: #4d4a4a;
+            font-style: italic;
+        }
+
+        .quote-section .author {
+            font-weight: bold;
+        }
+
+        #date-section {
+            position: right;
+            top: 100px;
+            right: 20px;
+            font-size: 1.2em;
+            color: #f9f9f9;
+            font-style: italic;
+        }
+
+        footer {
+            color: #4d4a4a;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myhobby.html">My Hobby</a>
+        <a href="foodhunting.html">Food Hunting</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="myidol.html">My Idol</a>
+        <a href="contact.html">Contact Me</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <abbr title="Norliyana">Norliyana Website</abbr>
+        <h3>Assalamualaikum,</h3>
+        <h1>Welcome to <br> Norliyana Website!</h1>
+        <p>
+            <em> I am a diploma student in Information Management, semester 5.
+                <br> Let's discover what is inside my website! </em>
+        </p>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <h3>Quotes of the day:</h3>
+        <p>"Doing your best is great,</p>
+        <p>but it's okay to take a break".</p>
+        <p class="author">- Jeonghan</p>
+    </div>
+
+    <!-- Date Display -->
+    <div id="date-section" style="text-align: right; margin-bottom: 20px; font-size: 1.2em; color: #333;">
+        <!-- JavaScript will insert the date here -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <a href="#top" style="color: #313131;">Back to top</a>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript to display the current date
+        function displayDate() {
+            const dateSection = document.getElementById("date-section");
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateSection.textContent = `Today is: ${today.toLocaleDateString(undefined, options)}`;
+        }
+
+        // Call the function to display the date
+        displayDate();
+    </script>
+</body>
+
+</html>
